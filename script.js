@@ -42,14 +42,19 @@ Calculator.prototype.hasDecimal = function(value) {
 }
 
 Calculator.prototype.calculate = function(operation) {
+  if (this.leftOfOperation === ".") {
+    this.leftOfOperation = 0;
+  }
+  if (this.rightOfOperation === ".") {
+    this.rightOfOperation = 0;
+  }
+
   if (operation === "/" || operation === "÷") {
     if (+this.rightOfOperation === 0) {
       return "Infinity";
     }
     return +this.leftOfOperation / +this.rightOfOperation;
   }
-
-  console.log("Expression: ", this.leftOfOperation , operation , this.rightOfOperation)
 
   if (operation === "-") {
     return +this.leftOfOperation - +this.rightOfOperation;
@@ -67,12 +72,6 @@ Calculator.prototype.calculate = function(operation) {
 document.addEventListener("DOMContentLoaded", function() {
   initializeCalculatorPage();
   calculator.keypadElement.addEventListener("click", handleClick);
-
-  // FOR LATER: tying keyboard events to the input
-  // document.addEventListener("keypress", function(e) {
-  //   console.log(e);
-  //   document.querySelector(".current-op").innerHTML = e.key;
-  // });
 });
 
 function initializeCalculatorPage() {

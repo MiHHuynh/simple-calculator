@@ -4,6 +4,8 @@
 
 A simple calculator implementation handling adding, subtracting, multiplying, and dividing of both whole and decimal numbers. This currently does NOT follow operator precedence (it calculates left to right).
 
+[VIEW IT LIVE](https://mihhuynh.github.io/simple-calculator/)
+
 ## Getting Started
 
 ### Prerequisites
@@ -45,6 +47,8 @@ file:///Users/<USERNAME>/<DIRECTORY CONTAINING CLONED REPO>/simple-calculator/in
 Input will take as many digits per number and as many concatenated chunks of number and operation as desired. The result is shown on the display screen when an expression is fully ended with a hit of the equal sign button.
 
 ![Calculator demo](images/calculator.gif)
+
+[VIEW IT LIVE](https://mihhuynh.github.io/simple-calculator/)
 
 ## Built With
 

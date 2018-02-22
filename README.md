@@ -8,6 +8,10 @@ A simple calculator implementation handling adding, subtracting, multiplying, an
 
 ## Getting Started
 
+You can view it online via this link: [https://mihhuynh.github.io/simple-calculator/](https://mihhuynh.github.io/simple-calculator/)
+
+Or, if you would like to run it locally:
+
 ### Prerequisites
 
 The only dependences that this solution has are:

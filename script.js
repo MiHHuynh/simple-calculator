@@ -1,14 +1,14 @@
 var calculator = new Calculator();
-var operations = new Set(['/', '+', '-', '*']);
+var operations = new Set(["/", "+", "-", "*"]);
 
 // A different function will run depending on which key is pressed.
 // This structure maps the response for each type of key.
 var keyFunctionMapper = {
-  'number' : handleNumberKey,
-  'operator' : handleOperatorKey,
-  'decimal':  handleDecimalKey,
-  'equal': handleEqualKey,
-  'clear': resetCalculator
+  "number" : handleNumberKey,
+  "operator" : handleOperatorKey,
+  "decimal":  handleDecimalKey,
+  "equal": handleEqualKey,
+  "clear": resetCalculator
 }
 
 function Calculator() {
@@ -49,7 +49,7 @@ Calculator.prototype.calculate = function(operation) {
     return +this.leftOfOperation / +this.rightOfOperation;
   }
 
-  console.log('Expression: ', this.leftOfOperation , operation , this.rightOfOperation)
+  console.log("Expression: ", this.leftOfOperation , operation , this.rightOfOperation)
 
   if (operation === "-") {
     return +this.leftOfOperation - +this.rightOfOperation;
@@ -86,7 +86,7 @@ function handleClick(event) {
   // 2. Append to the screen.
 
   let handlerFunction = keyFunctionMapper[event.target.classList[0]];
-  if (event.target.classList[0] === 'clear') {
+  if (event.target.classList[0] === "clear") {
     handlerFunction();
   }
   else {
@@ -139,7 +139,7 @@ function handleOperatorKey(value) {
 }
 
 function handleDecimalKey(value) {
-  if (calculator.operation) { // if there's already an operation, we can ignore left of op; check if right side already has decimal
+  if (calculator.operation) { // if there"s already an operation, we can ignore left of op; check if right side already has decimal
     if (!calculator.hasDecimal(calculator.rightOfOperation)) {
       calculator.rightOfOperation += value;
       calculator.currentDisplayValue += value;

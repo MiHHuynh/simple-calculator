@@ -50,6 +50,15 @@ Input will take as many digits per number and as many concatenated chunks of num
 
 [VIEW IT LIVE](https://mihhuynh.github.io/simple-calculator/)
 
+## Moving Forward
+
+To further extend functionality of this widget, I would like to implement the following things in the future:
+
+* Testing (unit tests, integration tests, etc.)
+* Caching of previous calculations (perhaps via localStorage)
+* Operator precendence/PEMDAS
+* Tying in keyboard events to allow the user to type in the input
+
 ## Built With
 
 * HTML
